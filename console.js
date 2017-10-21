@@ -5,6 +5,22 @@ page size on chrome to the smallest available before running the scirpt
 in the console.
 ************************************************************************/
 
+/*
+Jquery Injector because im lazy
+**/
+javascript:(function() {
+    function l(u, i) {
+        var d = document;
+        if (!d.getElementById(i)) {
+            var s = d.createElement('script');
+            s.src = u;
+            s.id = i;
+            d.body.appendChild(s);
+        }
+    }
+    l('//code.jquery.com/jquery-3.2.1.min.js', 'jquery')
+})();
+
 // Choose your resolution. It can be any of the following or whatever else weedmaps decides to add down the line. 
 // Accepted Params that I know of as of 10/17/2017
 // medium, medium_oriented, large, original
